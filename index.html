@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Conversor hexadecimal - decimal</title>
+  <link rel='stylesheet' href='index.css'>
+  <script type='module' src='index.js'></script>
+</head>
+<body>
+  <section id='title'>
+    <div id='gradient'>
+      <div id='base'>
+        <div id='hex-to-dec'>
+          <h3>Hexadecimal</h3>
+          <h1>A DECIMAL</h1>
+        </div>
+        <div id='dec-to-hex'>
+          <h3>Decimal</h3>
+          <h1>A HEXADECIMAL</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section id='options'>
+      <label id='convert'>
+        <span>A decimal</span>
+        <input type='checkbox' hidden />
+        <div id='convert-indicator'></div>
+        <span>A hexadecimal</span>
+      </label>
+      <label id='isColor'>
+        <input type='checkbox' />
+        <span>Color</span>
+      </label>
+    </section>
+    <input
+      id='input'
+      type='text'
+      placeholder='fc3'
+    />
+    <p id='result'>4035</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor hexadecimal a decimal</title>
+  <script type="module" src="old.js"></script>
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      width: min(100vw, 800px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section {
+      width: calc(100% - 16px);
+      margin-top: 16px;
+    }
+
+    label, p {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      & #inp-dec, #inp-hex, & #span-dec, & #span-hex {
+        margin-right: auto;
+      }
+
+      span:not(#span-dec, #span-hex) {
+        margin-left: 60px;
+        margin-right: 4px;
+      }
+    }
+
+    .inp-hex, .inp-dec {
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Hexadecimal a decimal</h1>
+    <label>
+      <strong>Hexadecimal</strong>
+      <input id="inp-hex" placeholder="Color hex" data-color="rgb" />
+      <input id="inp-hex-r" class="inp-hex" placeholder="rojo" data-color="r" />
+      <input id="inp-hex-g" class="inp-hex" placeholder="verde" data-color="g" />
+      <input id="inp-hex-b" class="inp-hex" placeholder="azul" data-color="b" />
+    </label>
+    <p>Decimal:
+      <span id="span-dec">rgb(0, 0, 0)</span>
+      <span id="span-dec-r">0</span>
+      <span id="span-dec-g">0</span>
+      <span id="span-dec-b">0</span>
+    </p>
+  </section>
+  <section>
+    <h1>Decimal a hexadecimal</h1>
+    <label>
+      <strong>Decimal</strong>
+      <input id="inp-dec" placeholder="Color rgb" data-color="rgb" />
+      <input id="inp-dec-r" class="inp-dec" placeholder="rojo" data-color="r" />
+      <input id="inp-dec-g" class="inp-dec" placeholder="verde" data-color="g" />
+      <input id="inp-dec-b" class="inp-dec" placeholder="azul" data-color="b" />
+    </label>
+    <p>Hexadecimal:
+      <span id="span-hex">#000</span>
+      <span id="span-hex-r" data-color="r">0</span>
+      <span id="span-hex-g">0</span>
+      <span id="span-hex-b">0</span>
+    </p>
+  </section>
+</body>
+</html>
